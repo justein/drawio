@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="jars">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/etc/build/jars/gae-stub-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/etc/build/jars/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/etc/build/jars/gson-2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/etc/build/jars/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/etc/build/jars/commons-lang3-3.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/etc/build/jars/commons-fileupload-1.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
