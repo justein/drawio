@@ -972,7 +972,7 @@ Sidebar.prototype.addGeneralPalette = function(expand)
 };
 
 /**
- * Adds the modell palette to the sidebar.
+ * Adds the parent model palette to the sidebar. Lyn  2018-1-19 11:26:24
  */
 Sidebar.prototype.addModelPalette = function(expand)
 {
@@ -984,18 +984,17 @@ Sidebar.prototype.addModelPalette = function(expand)
 	$.ajax({
 		type:'post',
 		//dataType:'json',
+		data:{'templateFlag':'0'},
 		async:false,
 		url:'/import',
 		success:function (data) {
 			modelData = data;
-			alert("sdsdfsdffdssfsd "+modelData);
-
-
+			//alert("sdsdfsdffdssfsd "+modelData);
 		},
 		error:function (XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+            //alert(XMLHttpRequest.status);
+            //alert(XMLHttpRequest.readyState);
+            alert("加载母版列表出现错误，请稍后重试");
         }
 	});
 
@@ -1032,7 +1031,7 @@ Sidebar.prototype.addModelPalette = function(expand)
         this.createEdgeTemplateEntry('endArrow=classic;html=1;', 50, 50, '', 'Directional Connector', null, lineTags + 'directional directed')
     ];
 
-    this.addPaletteFunctions('general', mxResources.get('general'), (expand != null) ? expand : true, fns);
+    this.addPaletteFunctions('parentTemplate', mxResources.get('parentTemplate'), (expand != null) ? expand : true, fns);
     //this.addModelPalette(true);
 };
 

@@ -101,6 +101,7 @@ public class SaveServlet extends HttpServlet
 			long t0 = System.currentTimeMillis();
 			String mime = request.getParameter("mime");
 			String filename = request.getParameter("filename");
+			String templateFlag = request.getParameter("templateFlag");
 			byte[] data = null;
 
 			// Data in data param is base64 encoded and deflated
@@ -130,7 +131,7 @@ public class SaveServlet extends HttpServlet
 					/**解码完成后保存到DB Lyn  2018-1-17 14:04:49*/
 					filename = filename.substring(0,filename.lastIndexOf("."));
 					filename = URLDecoder.decode(filename, "UTF-8");
-					drawEtherService.storeDrawData(filename,xml);
+					drawEtherService.storeDrawData(filename,xml,Integer.parseInt(templateFlag));
 
 				}
 

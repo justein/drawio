@@ -23,8 +23,10 @@ public class ImportServlet extends HttpServlet
 
 	public  void handlePost(HttpServletRequest request,
 								  HttpServletResponse response) throws ServletException, IOException {
+		/**通过参数来选择coll  Lyn  2018年1月22日 09:44:39*/
+		String templateFlag = request.getParameter("templateFlag");
 		drawEtherService = new DrawEtherService();
-		String resData = drawEtherService.getDrawDataTest();
+		String resData = drawEtherService.getDrawDataTest(Integer.parseInt(templateFlag));
 		if (resData!=null && resData!="") {
 			response.setStatus(HttpServletResponse.SC_OK);
 			response.setCharacterEncoding("UTF-8");
